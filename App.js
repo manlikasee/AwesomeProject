@@ -13,10 +13,11 @@ import Ex09 from './screens/week02/Ex09';
 import Ex10 from './screens/week02/Ex10';
 import Ex11 from './screens/week02/Ex11';
 import Ex12 from './screens/week02/Ex.12';
+import Travel from './screens/week3/Travel';
 
 export default function App() {
   return (
-    <Ex12 /> 
+    <Travel/> 
   );
 }
 
