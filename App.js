@@ -17,18 +17,21 @@ import Travel from './screens/week3/Travel';
 import Resort from './screens/week4/Resort';
 import Health from './screens/week5/Health';
 import Home from './screens/week6/Home';
+import { NavigationContainer } from '@react-navigation/native';
+import HomeStack from './navigations/HomeStack';
+import BottomTab from './navigations/BottomTab';
+import RootStack from './navigations/RootStack';
 
 export default function App() {
   return (
-    <Home />
+    // <Home />
+    <NavigationContainer>
+      {/* <HomeStack /> */}
+      {/* <BottomTab /> */}
+      <RootStack />
+    </NavigationContainer>
+
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
