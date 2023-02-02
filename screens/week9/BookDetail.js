@@ -7,6 +7,7 @@ import { Text } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { Alert } from "react-native";
 import BookStorage from "../../storages/BookStorage";
+import BookLaravel from "../../servies/BookLaravel";
 
 export default function BookDetail() {
     const route = useRoute();
@@ -25,13 +26,15 @@ export default function BookDetail() {
 
     const deleteBook = async () => {
         //REMOVE BOOK
-        await BookStorage.removeItem(item);
+        // await BookStorage.removeItem(item);
+        await BookLaravel.destroyItem(item);
         //REDIRECT TO
         navigation.navigate("Book");
     };
 
     useEffect(async () => {
-        let b = await BookStorage.readItemDetail(item);
+        // let b = await BookStorage.readItemDetail(item);
+        let b = await BookLaravel.getItemDetail(item);
         setBook(b);
     }, []);
 

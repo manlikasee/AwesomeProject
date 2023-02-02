@@ -7,6 +7,7 @@ import { Image } from "react-native";
 import { TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import BookStorage from "../../storages/BookStorage";
+import BookLaravel from "../../servies/BookLaravel";
 
 export default function Book() {
     const [products, setProducts] = useState([
@@ -18,7 +19,8 @@ export default function Book() {
 
     const loadBooks = async () => {
         setRefresh(true);
-        let products = await BookStorage.readItems();
+        // let products = await BookStorage.readItems();
+        let products = await BookLaravel.getItems();
         setProducts(products);
         setRefresh(false);
     };
