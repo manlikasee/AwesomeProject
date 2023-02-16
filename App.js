@@ -21,15 +21,20 @@ import { NavigationContainer } from '@react-navigation/native';
 import HomeStack from './navigations/HomeStack';
 import BottomTab from './navigations/BottomTab';
 import RootStack from './navigations/RootStack';
+import Checkmenu from './screens/week12/Checkmenu';
+import Myprofile from './screens/week12/Myprofile';
 
 export default function App() {
   return (
-    // <Home />
-    <NavigationContainer>
-      {/* <HomeStack /> */}
-      {/* <BottomTab /> */}
-      <RootStack />
-    </NavigationContainer>
+    // // <Home />
+    // <NavigationContainer>
+    //   {/* <HomeStack /> */}
+    //   {/* <BottomTab /> */}
+    //   <RootStack />
+    // </NavigationContainer>
+
+    <Myprofile/>
+
 
   );
 }
