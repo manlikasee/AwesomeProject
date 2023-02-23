@@ -27,13 +27,13 @@ import Myprofile from './screens/week12/Myprofile';
 export default function App() {
   return (
     // // <Home />
-    // <NavigationContainer>
-    //   {/* <HomeStack /> */}
-    //   {/* <BottomTab /> */}
-    //   <RootStack />
-    // </NavigationContainer>
+    <NavigationContainer>
+       {/* <HomeStack /> */}
+      {/* <BottomTab /> */}
+      <RootStack />
+    </NavigationContainer>
 
-    <Myprofile/>
+    // <Myprofile/>
 
 
   );
